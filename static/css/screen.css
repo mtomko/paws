@@ -1,0 +1,162 @@
+/* body defaults */
+body {
+    background-color: #CCCCCC;
+    font-family: "helvetica", "sans-serif";
+    color: #FFF;
+}
+
+h1 {
+    color: #333333;
+}
+
+/* main body styles */
+
+#main {
+    margin: 0 auto;
+    position: relative;
+    width: 780px;
+}
+
+/* header */
+div.header {
+    background: none repeat scroll 0% 0% #FFCC66;
+    padding: 10px 10px 0px 10px;
+}
+
+div.header-content {
+    background-color: #FF9900;
+    padding: 6px 0px 1px 10px;
+}
+
+/* footer */
+div.footer {
+    background: none repeat scroll 0% 0% #FFCC66;
+    padding: 0px 10px 10px 10px;
+}
+
+div.footer-content {
+    background-color: #FF9900;
+    color: #333;
+    font-size: 8;
+    padding: 0px 10px 0px 0px;
+    text-align: center;
+}
+
+/* navigation */
+ul, menu, dir {
+    -moz-padding-start: 40px;
+    display: block;
+    list-style-type: disc;
+    margin: 1em 0;
+}
+
+#menu {
+    display: block;
+    height: 26px;
+    list-style: none outside none;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1px 0;
+    position: static;
+}
+
+#menu a {
+    background: none repeat scroll 0 0 #3399CC;
+    color: white;
+    float: left;
+    font-size: 11px;
+    height: 24px;
+    line-height: 24px;
+    margin: 1px;
+    padding: 0.1em 8.76em;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+#menu li.current a {
+    background: none repeat scroll 0 0 #66CCCC;
+}
+
+#menu a:hover {
+    background: none repeat scroll 0 0 #66CCCC;
+}
+
+/* content */
+div.content {
+    background-color: #FFCC66;
+    margin: auto;
+    padding: 0px 10px 2px 10px;
+}
+
+div.body-wrapper {
+    background-color: #FFCC66;
+    padding: 1px 0px 0px 0px;
+    top: auto;
+}
+
+div.main-body {
+    background-color: #FFF;
+    color: #333333;
+    font-size: 11px;
+    font-weight: 400;
+    font-style: normal;
+    padding: 1px 4px 4px 4px;
+}
+
+div.content label,input {
+    display: block;
+    text-align: left;
+}
+
+table.aliases {
+	border-width: 1px;
+	border-spacing: 0px;
+	border-style: outset;
+	border-color: black;
+	border-collapse: collapse;
+    width: 600px;
+}
+
+table.aliases th {
+	border-width: 1px;
+	padding: 2px;
+	border-style: inset;
+	border-color: gray;
+	background-color: white;
+	-moz-border-radius: 0px 0px 0px 0px;
+}
+
+table.aliases tr.even td {
+    background-color: #FFF
+}
+
+table.aliases tr.odd td {
+    background-color: #FFCC66;
+}
+
+table.aliases td {
+	border-width: 1px;
+	padding: 2px;
+	border-style: inset;
+	border-color: gray;
+	background-color: white;
+	-moz-border-radius: 0px 0px 0px 0px;
+}
+
+table.aliases input.alias-delete {
+    color:#333333;
+    border:0px solid;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+table.aliases tr.even input.alias-delete {
+    background-color: #FFF;
+}
+
+table.aliases tr.odd input.alias-delete {
+     background-color: #FFCC66;
+}
+

@@ -1,0 +1,21 @@
+{% extends base.html %}
+
+{% block content %}
+<h1>PAWS Login</h2>
+<form action="/login" method="post">
+    <fieldset>
+        {{ xsrf_form_html() }}
+        <div class="input">
+            <label for="username">User: </label>
+            <input type="text" name="username" id="username" />
+        </div><!-- .input -->
+        <div class="input">
+            <label for="password">Password: </label>
+            <input type="password" name="password" id="password"/>
+        </div><!-- .input -->
+        <div class="input">
+            <input type="submit" value="Sign in"/>
+        </div><!-- .input -->
+    </fieldset>
+</form>
+{% end %}

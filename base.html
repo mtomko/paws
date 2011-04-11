@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html version="-//W3C//DTD XHTML 1.1//EN"
+    xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.w3.org/1999/xhtml
+    http://www.w3.org/MarkUp/SCHEMA/xhtml11.xsd" >
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="/static/css/screen.css" media="screen" />
+        <title>PAWS Admin Console</title>
+    </head>
+
+    <body>
+        <div id="main">
+            <div class="header">
+                <div class="header-content">
+                    <h1>PAWS Admin</h2>
+                    <h2>Python Alias Web Service</h2>
+                    {% block welcome %}<p>Welcome! Please <a href="/login">login</a>.</p>{% end %}
+                </div><!-- .header-content -->
+                <ul id="menu" class="nav">
+                    <li class="nav-element {{ 'current' if page == 'admin' else ''}} ">
+                        <a href="/admin">List Aliases</a>
+                    </li><!-- .nav-element -->
+                    <li class="nav-element {{ 'current' if page == 'add' else ''}} ">
+                        <a href="/admin/add">Add Alias</a>
+                    </li><!-- .nav-element -->
+                    <li class="nav-element">
+                        <a href="/logout">Logout</a>
+                    </li><!-- .nav-element -->
+                </ul><!-- #menu -->
+            </div><!-- .header -->
+
+            <div class="content">
+                <div class="body-wrapper">
+                    <div class="main-body">
+                    {% block content %}
+                    {% end %}
+                    </div><!-- .main-body -->
+                </div><!-- .body-wrapper -->
+            </div><!-- .content -->
+
+            <div class="footer">
+                <div class="footer-content">
+                    Comments and feedback are welcome.<br /> &copy; 2010, <a href="mailto:mark.tomko@simmons.edu">Mark Tomko</a>
+                </div><!-- .footer-content -->
+            </div><!-- .footer-->
+        </div><!-- .main -->
+
+    </body>
+
+</html>
+

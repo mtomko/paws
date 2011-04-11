@@ -1,0 +1,7 @@
+PAWS is a simple web alias service built on top of the Tornado web
+framework and the Kyotocabinate DBM.
+
+The code is presented under the Creative Commons Attribution 
+Share-Alike 3.0 license. You can see the terms at:
+
+http://creativecommons.org/licenses/by-sa/3.0/us/

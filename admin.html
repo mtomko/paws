@@ -1,0 +1,38 @@
+{% extends base.html %}
+
+{% block welcome %}
+<p>Welcome, {{ user }}!</p>
+{% end %}
+
+{% block content %}
+<h2>Manage Aliases</h2>
+<p>You have {{ record_count }} aliases.</p>
+{% if record_count > 0 %}
+<table class="aliases">
+    <tbody>
+        <tr>
+            <th>Alias</th>
+            <th>URL</th>
+            <th>Creator</th>
+            <th>Date</th>
+            <th>Delete?</th>
+        </tr>
+{% for row, (alias, desc) in enumerate(records.items()) %}
+        <tr class="{{ 'even' if row % 2 == 0 else 'odd' }}">
+            <td><a href="/a/{{ alias }}">{{ alias }}</a></td>
+            <td>{{ desc.get_url() }}</td>
+            <td>{{ desc.get_creator() }}</td>
+            <td>{{ desc.get_created_date() }}</td>
+            <td>
+                <form method="post" action="/admin/delete/{{ alias }}">
+                    {{ xsrf_form_html() }}
+                    <input type="submit" value=" X " class="alias-delete" />
+                </form>
+            </td>
+        </tr>
+{% end %}
+    </tbody>
+</table>
+{% end %}
+<p><a href="/admin/add">Add an alias</a>.</p>
+{% end %}

@@ -1,0 +1,26 @@
+{% extends base.html %}
+
+{% block welcome %}
+<p>Welcome, {{ user }}!</p>
+{% end %}
+
+{% block content %}
+<h2>Add Alias</h2>
+<form action="/admin/add" method="post">
+    <fieldset>
+        {{ xsrf_form_html() }}
+        <div class="input">
+            <label for="alias">Alias: </label>
+            <input type="text" name="alias" id="alias" />
+        </div><!-- .input -->
+        <div class="input">
+            <label for="url">URL: </label>
+            <input type="text" name="url" id="alias" width="255"/>
+        </div><!-- .input -->
+        <div class="input">
+            <input type="submit" value="Add" />
+        </div><!-- .input -->
+    </fieldset>
+</form>
+<p><a href="/admin">View all aliases</a>.</p>
+{% end %}
